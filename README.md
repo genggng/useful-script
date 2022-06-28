@@ -30,7 +30,7 @@ source ./proxy.sh
 If you want to trun on proxy permanently, add this script context to your *.bashrc*.
 ### wsl-xming.sh
 Since wsl is implemented by virtualizer, it has a separate ip address from the windows.  
- And wsl doesn't have a GUI. If you want to connect its windows host to display screen by xming, you need the ip address of host machine and configure it as a display devide.
+ And wsl doesn't have a GUI. If you want to connect its windows host to display screen by xming, you need the ip address of host machine and configure it as a display devide.  
  You can achieve the above with rhe following command temporarily or adding this script context to your *.bashrc* permanently.
  ```shell
  source ./wsl-xming.sh
