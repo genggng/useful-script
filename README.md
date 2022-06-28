@@ -1,6 +1,6 @@
 # usefule-script
-This is some usefule script in my daliy.  
-The can improve the efficiency of the linux server.
+These are some usefule script in my daliy.  
+They can improve the efficiency on the linux server.
 ### bupt-net.sh
 Login the netwotk gate in bupt.
 Please modify **user** and **pass* before use.
