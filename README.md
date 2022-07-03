@@ -1,4 +1,4 @@
-# usefule-script
+# useful-script
 These are some usefule script in my daliy.  
 They can improve the efficiency on the linux server.
 ### bupt-net.sh
