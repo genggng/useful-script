@@ -1,6 +1,39 @@
 # useful-script
 These are some usefule script in my daliy.  
 They can improve the efficiency on the linux server.
+
+### auto_gpu_select.sh
+
+This script provides an automated solution for allocating available GPUs based on memory usage thresholds. It implements a locking mechanism to prevent multiple processes from competing for the same GPU resources.
+
+#### 0.Features
+
+- **Automatic GPU detection**: Identifies available GPUs based on memory utilization
+- **Configurable threshold**: Set your own threshold for considering a GPU "available"
+- **Wait mode**: Option to wait until requested GPUs become available
+- **Process-safe locking**: Prevents multiple processes from acquiring the same GPU
+- **Clean exit handling**: Automatically releases GPU locks on script termination
+
+#### 1.Configuration Variables
+
+| Variable        | Description                                                                 | Default Value |
+|-----------------|-----------------------------------------------------------------------------|---------------|
+| `GPU_NUM`       | Number of GPUs required by your task                                        | 2             |
+| `THRESHOLD`     | Memory usage threshold (0-1). GPUs below this are considered available.     | 0.05 (5%)     |
+| `WAIT_MODE`     | `true`: Wait until GPUs are available. `false`: Exit if GPUs unavailable.   | true          |
+| `WAIT_INTERVAL` | Seconds between checks in wait mode (only when `WAIT_MODE=true`)            | 30            |
+| `LOCK_DIR`      | Directory for storing GPU lock files                                        | ~/tmp/gpu_locks |
+
+#### 2.Usage
+
+**Basic usage (wait mode)**:
+```bash
+# Copy the context in auto_gpu_select.sh to here
+
+# Please write the program you expect to execute here.
+```
+
+
 ### bupt-net.sh
 Login the netwotk gate in bupt.
 Please modify **user** and **pass** before use.
